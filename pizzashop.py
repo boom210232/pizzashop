@@ -1,5 +1,6 @@
 from pizza import *
 
+
 # This function shows a limitation on tool-assisted
 # refactoring in a dynamic language like Python.
 #
@@ -10,7 +11,6 @@ from pizza import *
 
 
 def order_pizza(item: Pizza):
-
     """Print a description of a pizza, along with its price."""
 
     print(f"A {item}")
@@ -36,4 +36,3 @@ if __name__ == "__main__":
     pizza4 = Pizza(PizzaSize.jumbo)
     pizza4.add_topping("veggie")
     order_pizza(pizza4)
-

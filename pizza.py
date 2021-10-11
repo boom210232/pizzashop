@@ -15,11 +15,12 @@ class PizzaSize(Enum):
     def topping_price(self):
         return self.value['topping']
 
+
 class Pizza:
     """A pizza with a size and optional toppings."""
 
-    def __init__(self, size:PizzaSize):
-        if not isinstance(size,PizzaSize):
+    def __init__(self, size: PizzaSize):
+        if not isinstance(size, PizzaSize):
             raise TypeError("size must me PizzaSize")
         self.size = size
         self.toppings = []
@@ -28,7 +29,7 @@ class Pizza:
         """Price of pizza depends on size and number of toppings."""
         # Explanatory or inline are optional. (I choose in inline.)
         return self.size.price + self.size.topping_price * len(self.toppings)
-    
+
     def add_topping(self, topping):
         """Add a topping to the pizza"""
         if topping not in self.toppings:
@@ -43,4 +44,3 @@ class Pizza:
         else:
             description += " plain cheese pizza"
         return description
-
