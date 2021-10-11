@@ -21,7 +21,7 @@ class Pizza:
 
     def __init__(self, size: PizzaSize):
         if not isinstance(size, PizzaSize):
-            raise TypeError("size must me PizzaSize")
+            raise TypeError("size must me a PizzaSize")
         self.size = size
         self.toppings = []
 
